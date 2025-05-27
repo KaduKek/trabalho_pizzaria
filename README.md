@@ -32,43 +32,58 @@ Estrutura dos Arquivos
 
 /pizzaria_calabresos/
 
-├── app.py
-├── db.py
-├── pedido.py
-├── pizzaria.py
-├── pizzaria.db
-├── cardapio.pickle
-├── pedidos.pickle
-├── requirements.txt
-├── /templates/
-│   ├── pedido.html
-│   └── pedido_confirmado.html
-├── /static/
-│   ├── css/
-│   │   └── style.css
-│   └── images/
-└── __pycache__/
+├── app.py                 # Arquivo principal da aplicação Flask com rotas e inicialização
+
+├── db.py                  # Módulo para criação do banco e manipulação de dados (CRUD)
+
+├── pizzaria.py             # Código original base (terminal) do projeto
+
+├── pizzaria.db             # Banco de dados SQLite contendo pizzas, bebidas e pedidos
+
+├── pedido.py               # Lógica auxiliar para manipulação de pedidos
+
+├── templates/             # Páginas HTML 
+
+├── static/                # Arquivos CSS, JS, imagens 
+
+├── requirements.txt       # Dependências do projeto
+
+├── README.md              # Documentação do projeto
+
+├── cardapio.pickle        # Arquivo pickle com o cardápio salvo 
+
+├── pedidos.pickle         # Arquivo pickle com os pedidos salvos                            
 
 Instruções de Execução
 
 1-Instale os pacotes necessários:
+
 dê cd .\pizza-gh-pages
+
 depois:
+
 pip install flask
+
 depois:
+
 pip install -r requirements.txt
 
 2-Execute o servidor:
+
 python app.py ou flask run
 
+3-Acesse no navegador:
+
+http://127.0.0.1:5000
+
 Integrantes do grupo:
+
 Carlos Eduardo Alves Teixeira de Oliveira
 
 Pedro Canellas de Sousa Alcantara
 
 Luiz Filipe Estrela Lara
 
-3-Acesse no navegador:
-http://127.0.0.1:5000
+
 
 
