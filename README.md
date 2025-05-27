@@ -31,6 +31,7 @@ Bootstrap + estilos customizados – layout responsivo e moderno
 Estrutura dos Arquivos
 
 /pizzaria_calabresos/
+
 ├── app.py
 ├── db.py
 ├── pedido.py
