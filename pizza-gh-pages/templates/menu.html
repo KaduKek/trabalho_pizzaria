@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pizzaria Calabresos</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+<!-- Fontes do Google (podem permanecer como estão) -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
+
+<!-- CSS Local via Flask -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/open-iconic-bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/animate.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/aos.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/ionicons.min.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.timepicker.css') }}">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/flaticon.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/icomoon.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  </head>
+  <body>
+  	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+<a class="navbar-brand" href="{{ url_for('home') }}">
+  <span class="flaticon-pizza-1 mr-1"></span>Pizzaria<br><small>Calabresos</small>
+</a>		      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="oi oi-menu"></span> Menu
+		      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+			<li class="nav-item active"><a href="{{ url_for('home') }}" class="nav-link">Início</a></li>
+ 			<li class="nav-item"><a href="{{ url_for('menu') }}" class="nav-link">Menu</a></li>
+ 			<li class="nav-item"><a href="{{ url_for('servicos') }}" class="nav-link">Serviços</a></li>
+ 			<li class="nav-item"><a href="{{ url_for('sobre') }}" class="nav-link">Sobre nós</a></li>
+ 			<li class="nav-item"><a href="{{ url_for('contato') }}" class="nav-link">Contato</a></li>
+	        </ul>
+	      </div>
+		  </div>
+	  </nav>
+    <!-- END nav -->
+
+<section class="home-slider owl-carousel img" style="background-image: url({{ url_for('static', filename='images/bg_1.jpg') }});">
+
+  <div class="slider-item" style="background-image: url({{ url_for('static', filename='images/bg_3.jpg') }});">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center">
+
+            <div class="col-md-7 col-sm-12 text-center ftco-animate">
+            	<h1 class="mb-3 mt-5 bread">Nosso Menu</h1>
+<p class="breadcrumbs">
+  <span class="mr-2"><a href="{{ url_for('home') }}">Início</a></span> 
+  <span>Menu</span>
+</p>            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+    
+	<section class="ftco-section">
+		<div class="container">
+		  <div class="row justify-content-center mb-5 pb-3">
+			<div class="col-md-7 heading-section ftco-animate text-center">
+			  <h2 class="mb-4">Nossas Pizzas Tradicionais</h2>
+			  <p>Sabores que todo brasileiro ama, preparados com ingredientes frescos e massa artesanal. Escolha a sua preferida e aproveite!</p>
+			</div>
+		  </div>
+		</div>
+		<div class="container-wrap">
+		  <div class="row no-gutters d-flex">
+	  
+			<div class="col-lg-4 d-flex ftco-animate">
+			  <div class="services-wrap d-flex">
+    <a href="{{ url_for('pedido') }}" class="img" style="background-image: url({{ url_for('static', filename='images/pizza-1.png') }});"></a>
+				<div class="text p-4">
+				  <h3>Calabresa</h3>
+				  <p>Muçarela, calabresa fatiada, cebola e orégano.</p>
+				  <p class="price"><span>R$ 50,00</span> <a href="{{ url_for('pedido') }}" class="ml-2 btn btn-white btn-outline-white">Pedir</a></p>
+				</div>
+			  </div>
+			</div>
+	  
+			<div class="col-lg-4 d-flex ftco-animate">
+			  <div class="services-wrap d-flex">
+    <a href="{{ url_for('pedido') }}" class="img" style="background-image: url({{ url_for('static', filename='images/pizza-2.jpg') }});"></a>
+				<div class="text p-4">
+				  <h3>Portuguesa</h3>
+				  <p>Muçarela, presunto, ovo, cebola, pimentão, azeitonas e orégano. Um sabor completo!</p>
+				  <p class="price"><span>R$ 55,00</span> <a href="{{ url_for('pedido') }}" class="ml-2 btn btn-white btn-outline-white">Pedir</a></p>
+				</div>
+			  </div>
+			</div>
+	  
+			<div class="col-lg-4 d-flex ftco-animate">
+			  <div class="services-wrap d-flex">
+    <a href="{{ url_for('pedido') }}" class="img" style="background-image: url({{ url_for('static', filename='images/pizza-3.jpg') }});"></a>
+				<div class="text p-4">
+				  <h3>Frango com Catupiry</h3>
+				  <p>Frango desfiado temperado com catupiry cremoso sobre uma base de muçarela.</p>
+				  <p class="price"><span>R$ 58,00</span> <a href="{{ url_for('pedido') }}" class="ml-2 btn btn-white btn-outline-white">Pedir</a></p>
+				</div>
+			  </div>
+			</div>
+	  
+			<div class="col-lg-4 d-flex ftco-animate">
+			  <div class="services-wrap d-flex">
+    <a href="{{ url_for('pedido') }}" class="img order-lg-last" style="background-image: url({{ url_for('static', filename='images/pizza-4.jpg') }});"></a>
+				<div class="text p-4">
+				  <h3>Quatro Queijos</h3>
+				  <p>Muçarela, provolone, parmesão e catupiry. Uma explosão de sabores para os amantes de queijo.</p>
+				  <p class="price"><span>R$ 60,00</span> <a href="{{ url_for('pedido') }}" class="ml-2 btn btn-white btn-outline-white">Pedir</a></p>
+				</div>
+			  </div>
+			</div>
+	  
+			<div class="col-lg-4 d-flex ftco-animate">
+			  <div class="services-wrap d-flex">
+    <a href="{{ url_for('pedido') }}" class="img order-lg-last" style="background-image: url({{ url_for('static', filename='images/pizza-5.jpg') }});"></a>
+				<div class="text p-4">
+				  <h3>Marguerita</h3>
+				  <p>Molho de tomate, muçarela, tomate em rodelas, manjericão e um toque de azeite.</p>
+				  <p class="price"><span>R$ 52,00</span> <a href="{{ url_for('pedido') }}" class="ml-2 btn btn-white btn-outline-white">Pedir</a></p>
+				</div>
+			  </div>
+			</div>
+	  
+			<div class="col-lg-4 d-flex ftco-animate">
+			  <div class="services-wrap d-flex">
+    <a href="{{ url_for('pedido') }}" class="img order-lg-last" style="background-image: url({{ url_for('static', filename='images/pizza-6.jpg') }});"></a>
+				<div class="text p-4">
+				  <h3>Napolitana</h3>
+				  <p>Muçarela, rodelas de tomate, parmesão ralado e orégano. Simples, leve e saborosa.</p>
+				  <p class="price"><span>R$ 48,00</span> <a href="{{ url_for('pedido') }}" class="ml-2 btn btn-white btn-outline-white">Pedir</a></p>
+				</div>
+			  </div>
+			</div>
+	  
+		  </div>
+		</div>
+	  </section>
+
+	
+
+		  
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+		<section class="ftco-section">
+			<div class="container">
+			  <div class="row justify-content-center mb-5 pb-3 mt-5 pt-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+				  <h2 class="mb-4">Preços do Nosso Cardápio</h2>
+				  <p class="flip"><span class="deg1"></span><span class="deg2"></span><span class="deg3"></span></p>
+				  <p class="mt-5">Confira algumas de nossas deliciosas pizzas artesanais com sabores clássicos do Brasil. Sabor e qualidade em cada fatia!</p>
+				</div>
+			  </div>
+		  
+			  <div class="row">
+				<div class="col-md-6">
+				  <div class="pricing-entry d-flex ftco-animate">
+    <div class="img" style="background-image: url({{ url_for('static', filename='images/pizza-1.png') }});"></div>
+					<div class="desc pl-3">
+					  <div class="d-flex text align-items-center">
+						<h3><span>Calabresa</span></h3>
+						<span class="price">R$ 50,00</span>
+					  </div>
+					  <div class="d-block">
+						<p>Muçarela, calabresa, cebola roxa e orégano. Um clássico irresistível!</p>
+					  </div>
+					</div>
+				  </div>
+		  
+				  <div class="pricing-entry d-flex ftco-animate">
+    <div class="img" style="background-image: url({{ url_for('static', filename='images/pizza-2.jpg') }});"></div>
+					<div class="desc pl-3">
+					  <div class="d-flex text align-items-center">
+						<h3><span>Portuguesa</span></h3>
+						<span class="price">R$ 55,00</span>
+					  </div>
+					  <div class="d-block">
+						<p>Muçarela, presunto, ovo, cebola, pimentão, ervilha e azeitona.</p>
+					  </div>
+					</div>
+				  </div>
+		  
+				  <div class="pricing-entry d-flex ftco-animate">
+    <div class="img" style="background-image: url({{ url_for('static', filename='images/pizza-3.jpg') }});"></div>
+					<div class="desc pl-3">
+					  <div class="d-flex text align-items-center">
+						<h3><span>Frango com Catupiry</span></h3>
+						<span class="price">R$ 58,00</span>
+					  </div>
+					  <div class="d-block">
+						<p>Frango desfiado temperado, catupiry original e muçarela.</p>
+					  </div>
+					</div>
+				  </div>
+		  
+				  <div class="pricing-entry d-flex ftco-animate">
+    <div class="img" style="background-image: url({{ url_for('static', filename='images/pizza-4.jpg') }});"></div>
+					<div class="desc pl-3">
+					  <div class="d-flex text align-items-center">
+						<h3><span>Quatro Queijos</span></h3>
+						<span class="price">R$ 60,00</span>
+					  </div>
+					  <div class="d-block">
+						<p>Muçarela, parmesão, provolone e catupiry. Para os amantes de queijo!</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+		  
+				<div class="col-md-6">
+				  <div class="pricing-entry d-flex ftco-animate">
+    <div class="img" style="background-image: url({{ url_for('static', filename='images/pizza-5.jpg') }});"></div>
+					<div class="desc pl-3">
+					  <div class="d-flex text align-items-center">
+						<h3><span>Marguerita</span></h3>
+						<span class="price">R$ 52,00</span>
+					  </div>
+					  <div class="d-block">
+						<p>Muçarela, tomate em rodelas, manjericão fresco e toque de azeite.</p>
+					  </div>
+					</div>
+				  </div>
+		  
+				  <div class="pricing-entry d-flex ftco-animate">
+    <div class="img" style="background-image: url({{ url_for('static', filename='images/pizza-6.jpg') }});"></div>
+					<div class="desc pl-3">
+					  <div class="d-flex text align-items-center">
+						<h3><span>Napolitana</span></h3>
+						<span class="price">R$ 50,00</span>
+					  </div>
+					  <div class="d-block">
+						<p>Muçarela, tomate, orégano e parmesão ralado.</p>
+					  </div>
+					</div>
+				  </div>
+		  
+				  <div class="pricing-entry d-flex ftco-animate">
+    <div class="img" style="background-image: url({{ url_for('static', filename='images/pizza-7.jpg') }});"></div>
+					<div class="desc pl-3">
+					  <div class="d-flex text align-items-center">
+						<h3><span>Bacon</span></h3>
+						<span class="price">R$ 54,00</span>
+					  </div>
+					  <div class="d-block">
+						<p>Muçarela coberta com pedaços generosos de bacon crocante.</p>
+					  </div>
+					</div>
+				  </div>
+		  
+				  <div class="pricing-entry d-flex ftco-animate">
+    <div class="img" style="background-image: url({{ url_for('static', filename='images/pizza-8.jpg') }});"></div>
+					<div class="desc pl-3">
+					  <div class="d-flex text align-items-center">
+						<h3><span>Presunto</span></h3>
+						<span class="price">R$ 45,00</span>
+					  </div>
+					  <div class="d-block">
+						<p>Pizza leve de presunto com quejo gorgonzola</p>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </section>
+
+		  <section class="ftco-menu">
+			<div class="container-fluid">
+			  <div class="row d-md-flex">
+<div class="col-lg-4 ftco-animate img f-menu-img mb-5 mb-md-0" 
+     style="background-image: url('{{ url_for('static', filename='images/about.jpg') }}');">
+				</div>
+				<div class="col-lg-8 ftco-animate p-md-5">
+				  <div class="row">
+					<div class="col-md-12 nav-link-wrap mb-5">
+					  <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active" id="v-pills-1-tab" data-toggle="pill" href="#v-pills-1" role="tab" aria-controls="v-pills-1" aria-selected="true">Pizzas Salgado</a>
+						<a class="nav-link" id="v-pills-2-tab" data-toggle="pill" href="#v-pills-2" role="tab" aria-controls="v-pills-2" aria-selected="false">Pizzas Doces</a>
+						<a class="nav-link" id="v-pills-3-tab" data-toggle="pill" href="#v-pills-3" role="tab" aria-controls="v-pills-3" aria-selected="false">Bebidas</a>
+					  </div>
+					</div>
+		  
+					<div class="col-md-12 d-flex align-items-center">
+					  <div class="tab-content ftco-animate" id="v-pills-tabContent">
+		  
+              <!-- PIZZAS SALGADAS -->
+<div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza-1.png') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Pizza de Calabresa</a></h3>
+          <p>Calabresa fatiada, cebola e azeitonas pretas.</p>
+          <p class="price"><span>R$ 50,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza-3.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Frango com Catupiry</a></h3>
+          <p>Frango desfiado temperado, catupiry original e muçarela.</p>
+          <p class="price"><span>R$ 58,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza-2.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Pizza Portuguesa</a></h3>
+          <p>Presunto, ovo, cebola, ervilha, mussarela e azeitonas.</p>
+          <p class="price"><span>R$ 55,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PIZZAS DOCES -->
+<div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza-chocolate.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Pizza de Chocolate</a></h3>
+          <p>Chocolate ao leite derretido com granulado.</p>
+          <p class="price"><span>R$ 50,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza-sensacao.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Pizza Sensação</a></h3>
+          <p>Chocolate ao leite com morangos frescos e leite condensado.</p>
+          <p class="price"><span>R$ 55,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza-doce-leite.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Pizza de Doce de Leite com Coco</a></h3>
+          <p>Doce de leite cremoso com cobertura de coco ralado.</p>
+          <p class="price"><span>R$ 52,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza-nutella.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Pizza de Nutella</a></h3>
+          <p>Deliciosa Nutella com pedaços de banana frescos e açúcar de confeiteiro.</p>
+          <p class="price"><span>R$ 60,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza-banana-canela.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Pizza de Banana com Canela</a></h3>
+          <p>Fatias de banana, açúcar e canela com um toque de leite condensado.</p>
+          <p class="price"><span>R$ 48,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza-confete.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Pizza de Chocolate com Confete</a></h3>
+          <p>Chocolate derretido coberto com confetes coloridos crocantes.</p>
+          <p class="price"><span>R$ 50,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza_marshmallow.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Pizza de Marshmallow</a></h3>
+          <p>Chocolate derretido com marshmallows tostados por cima.</p>
+          <p class="price"><span>R$ 53,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/pizza-prestigio.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Pizza Prestígio</a></h3>
+          <p>Chocolate meio amargo com coco fresco ralado e leite condensado.</p>
+          <p class="price"><span>R$ 56,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEBIDAS -->
+<div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/drink-1.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Refrigerante Lata</a></h3>
+          <p>Coca-Cola, Guaraná, Pepsi ou Fanta (350ml).</p>
+          <p class="price"><span>R$ 6,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/drink-2.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Suco Natural</a></h3>
+          <p>Sabores variados: laranja, limão, abacaxi ou maracujá.</p>
+          <p class="price"><span>R$ 7,50</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 text-center">
+      <div class="menu-wrap">
+    <a href="{{ url_for('pedido') }}" class="menu-img img mb-4" style="background-image: url('{{ url_for('static', filename='images/drink-3.jpg') }}');"></a>
+        <div class="text">
+          <h3><a href="{{ url_for('pedido') }}">Água Mineral</a></h3>
+          <p>Com ou sem gás (500ml).</p>
+          <p class="price"><span>R$ 4,00</span></p>
+          <p><a href="{{ url_for('pedido') }}" class="btn btn-white btn-outline-white">Adicionar ao carrinho</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </section>
+
+    <footer class="ftco-footer ftco-section img">
+    	<div class="overlay"></div>
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Sobre Nós</h2>
+              <p>Na Pizzaria Calabresos, fazemos mais que pizza — criamos momentos. Usamos ingredientes frescos, massa artesanal e muito cuidado em cada preparo. Nosso objetivo é oferecer sabor, qualidade e aquele clima acolhedor que transforma qualquer refeição em uma boa lembrança.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="https://x.com/daviooficiall"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.facebook.com/daviooficialll/"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="https://www.instagram.com/daviooficialll/"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Nossos Últimos Post</h2>
+              <div class="block-21 mb-4 d-flex">
+      <a class="blog-img mr-4" style="background-image: url({{ url_for('static', filename='images/pizza-1.png') }});"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">A pizza é muito boa, mas seria ótimo ter mais opções de tempero!</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> 02 de abril, 2025</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Maria Souza</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 25</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="block-21 mb-4 d-flex">
+      <a class="blog-img mr-4" style="background-image: url({{ url_for('static', filename='images/pizza-6.jpg') }});"></a>
+                <div class="text">
+                  <h3 class="heading"><a href="#">A pizza Marguerita é uma das minhas favoritas, sempre fresca e com ingredientes de qualidade. A melhor pedida!</a></h3>
+                  <div class="meta">
+                    <div><a href="#"><span class="icon-calendar"></span> 10 de setembro, 2025</a></div>
+                    <div><a href="#"><span class="icon-person"></span> Carlos Oliveira</a></div>
+                    <div><a href="#"><span class="icon-chat"></span> 19</a></div>
+                  </div>
+                </div>
+              </div>
+            </div>	
+          </div>
+          <div class="col-lg-2 col-md-6 mb-5 mb-md-5">
+             <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Serviços</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Cozinha</a></li>
+                <li><a href="#" class="py-2 d-block">Delivery</a></li>
+                <li><a href="#" class="py-2 d-block">Qualidade dos alimentos</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-5 mb-md-5">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Alguma dúvida?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">SEP/SUL EQ704/904 Conj.A</h3></div>, Brasília, DF</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+55 (61) 4002-8922</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">calabreso@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Este site foi feito  <i class="icon-heart" aria-hidden="true"></i> por <a href="https://colorlib.com" target="_blank">Calabresos</a>
+  </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery-migrate-3.0.1.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.easing.1.3.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.stellar.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/owl.carousel.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/aos.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.animateNumber.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/bootstrap-datepicker.js') }}"></script>
+<script src="{{ url_for('static', filename='js/jquery.timepicker.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/scrollax.min.js') }}"></script>
+
+<!-- Esse continua externo, pois é um script remoto do Google -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+
+<script src="{{ url_for('static', filename='js/google-map.js') }}"></script>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    
+  </body>
+</html>
